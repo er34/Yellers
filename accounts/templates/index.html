@@ -1,18 +1,18 @@
-﻿<html>
-<head>
-<link rel="stylesheet" type="text/css" href="/static/main.css">
-</head>
-<body>
-<table style="height:100%; width:100%;">
-<tr style="height:30px"><td style="color: #d1d1d1; background-color: #343434;">
+﻿{% extends "base.html" %}
+
+{% block top %}
 <div style="float:left;">
-Здарова, Санёк!
+Здарова, {{ user.username }}
 </div>
 <div style="float:right;">
-выйти
+<form action="{% url 'logout' %}" method="POST" style="margin-bottom:0">
+{% csrf_token %}
+<input type="submit" value="выйти" />
+</form>
 </div>
-</td></tr>
-<tr><td style="vertical-align:top;">
+{% endblock %}
+
+{% block content %}
 <div style="width:90%; margin:20px; padding-bottom:10px; border-bottom: 1px #000000 solid;">
 Украина и Новороссия 7 июля. Онлайн-репортаж
 Редакция Ria.ru следит за обстановкой на Украине и в Новороссии (Союзе Донецкой и Луганской народных республик), где продолжается противостояние между подконтрольными Киеву силовиками и ополчением.
@@ -70,11 +70,4 @@
 
 РИА Новости http://ria.ru/#ixzz36lxZUEZN
 </div>
-</td></tr>
-</td></tr>
-<tr style="height:30px;"><td style="color: #d1d1d1; background-color: #343434;">
-	&copy; MG-technics 2014
-</td></tr>
-</table>
-</body>
-</html>
+{% endblock %}
