@@ -3,6 +3,12 @@
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'onlybox@gmail.com'
+EMAIL_HOST_PASSWORD = 'videomodemsfreefree'
+
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
@@ -138,6 +144,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'accounts',
     'messages',
+	'captcha',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'

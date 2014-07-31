@@ -64,6 +64,8 @@ class UInterest(models.Model):
     ring = models.BooleanField(default=True)
     price = models.IntegerField(max_length=10, null=True, unique=False, blank=True)
     
-    
+class Captcha(models.Model):
+    hash = models.CharField(max_length=100, null=False, unique=False, blank=False)
+    code = models.CharField(max_length=4, null=False, unique=False, blank=False)    
     
     

@@ -2,7 +2,10 @@
 
 {% block top %}
 <div style="float:left;">
-Здарова, {{ user.username }}
+Здарова, 
+<a class="fancybox fancybox.ajax" href="{% url 'account' %}">
+<font color="white">{{ user.username }}</font>
+</a>
 </div>
 <div style="float:right;">
 <form action="{% url 'logout' %}" method="POST" style="margin-bottom:0">
@@ -13,6 +16,7 @@
 {% endblock %}
 
 {% block content %}
+<td style="height: 100%;vertical-align:top;">
 <div style="width:90%; margin:20px; padding-bottom:10px; border-bottom: 1px #000000 solid;">
 Украина и Новороссия 7 июля. Онлайн-репортаж
 Редакция Ria.ru следит за обстановкой на Украине и в Новороссии (Союзе Донецкой и Луганской народных республик), где продолжается противостояние между подконтрольными Киеву силовиками и ополчением.
@@ -70,4 +74,5 @@
 
 РИА Новости http://ria.ru/#ixzz36lxZUEZN
 </div>
+</td>
 {% endblock %}

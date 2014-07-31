@@ -7,7 +7,7 @@ a:link,
 a:visited ,
 a:hover,
 a:active {
-	color: #e1e1e1;
+	color: #343434;
 }
 
 body 
@@ -46,3 +46,17 @@ table td {
 	color: #343434;
 	vertical-align:top;
 }
+
+#wrapper #centerblock {
+	vertical-align:top;
+}
+
+.invisible {
+	float: right;
+	display: none;
+}
+
+.visible {
+	float: right;
+}
+	
